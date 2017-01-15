@@ -9,10 +9,10 @@ var Nav = React.createClass({
           <ul className="menu">
             <li className="menu-text">React Clock App!</li>
             <li>
-              <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>What time is it?</IndexLink>
+              <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Look up the time</IndexLink>
             </li>
             <li>
-              <IndexLink to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</IndexLink>
+              <Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</Link>
             </li>
           </ul>
         </div>
