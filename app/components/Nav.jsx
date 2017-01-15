@@ -4,32 +4,31 @@ var {Link, IndexLink} = require('react-router');
 var Nav = React.createClass({
   render: function () {
     return (
-      <div class="top-bar">
-        <div class="top-bar-left">
-          <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Site Title</li>
+      <div className="top-bar">
+        <div className="top-bar-left">
+          <ul className="menu">
+            <li className="menu-text">React Clock App!</li>
             <li>
-              <a href="#">One</a>
-              <ul class="menu vertical">
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
-              </ul>
+              <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>What time is it?</IndexLink>
             </li>
-            <li><a href="#">Two</a></li>
-            <li><a href="#">Three</a></li>
+            <li>
+              <IndexLink to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</IndexLink>
+            </li>
           </ul>
         </div>
-        <div class="top-bar-right">
-          <ul class="menu">
-            <li><input type="search" placeholder="Search"></li>
-            <li><button type="button" class="button">Search</button></li>
+        <div className="top-bar-right">
+          <ul className="menu">
+            <li className="menu-text">
+              View my <a href="https://github.com/zerubabbel" target="_blank">Github!</a>
+            </li>
           </ul>
         </div>
       </div>
     );
   }
 });
+
+
 
 
 module.exports = Nav;
