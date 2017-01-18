@@ -1,6 +1,7 @@
 var React = require('react');
 var ClockForm = require('ClockForm');
 var ClockMessage = require('ClockMessage');
+var WorldClock = require('WorldClock');
 
 var Clock = React.createClass({
   getInitialState: function () {
@@ -10,10 +11,18 @@ var Clock = React.createClass({
     }
   },
   handleSearch: function (place) {
-    this.setState({
-      place: place,
-      time: 333
+    var that = this;
+
+    WorldClock.getTime(place).then(function (place) {
+      that.setState({
+        place: place,
+        time: time
+      });
     });
+    // this.setState({
+    //   place: place,
+    //   time: 333
+    // });
   },
   render: function(){
     var {place, time} = this.state;

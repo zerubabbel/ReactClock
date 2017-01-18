@@ -8,6 +8,9 @@ var Nav = React.createClass({
         <div className="top-bar-left">
           <ul className="menu">
             <li className="menu-text">React Clock App!</li>
+            <li className="menu-text">
+            Powered by <a href="https://www.amdoren.com">Amdoren</a>
+            </li>
             <li>
               <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Look up the time</IndexLink>
             </li>

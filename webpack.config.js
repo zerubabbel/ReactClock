@@ -29,7 +29,8 @@ module.exports = {
       Clock: 'app/components/Clock.jsx',
       ClockForm: 'app/components/ClockForm.jsx',
       ClockMessage: 'app/components/ClockMessage.jsx',
-      applicationStyles: 'app/styles/app.scss'
+      applicationStyles: 'app/styles/app.scss',
+      WorldClock: 'app/api/WorldClock.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
