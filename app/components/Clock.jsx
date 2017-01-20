@@ -13,7 +13,7 @@ var Clock = React.createClass({
   handleSearch: function (place) {
     var that = this;
 
-    WorldClock.getTime(place).then(function (place) {
+    WorldClock.getTime(place).then(function (time) {
       that.setState({
         place: place,
         time: time
