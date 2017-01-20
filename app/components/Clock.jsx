@@ -6,7 +6,7 @@ var WorldClock = require('WorldClock');
 var Clock = React.createClass({
   getInitialState: function () {
     return {
-      place: 'heck',
+      place: 'san jose',
       time: 2342
     }
   },
