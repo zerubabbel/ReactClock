@@ -6,8 +6,8 @@ var WorldClock = require('WorldClock');
 var Clock = React.createClass({
   getInitialState: function () {
     return {
-      place: 'san jose',
-      time: 2342
+      place: '{insert lat and long points}',
+      time: '{search for time zone}'
     }
   },
   handleSearch: function (place) {
@@ -29,7 +29,7 @@ var Clock = React.createClass({
 
     return (
       <div>
-        <h3>Clock</h3>
+        <h3>Timezone Finder</h3>
         <ClockForm onSearch={this.handleSearch}/>
         <ClockMessage place={place} time={time}/>
       </div>

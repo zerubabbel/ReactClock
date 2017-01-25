@@ -7,7 +7,7 @@ var ClockMessage = React.createClass({
     return (
       <div>
         <h3>
-          It's {time} in {place}
+          It's {time} at {place}
         </h3>
       </div>
     )

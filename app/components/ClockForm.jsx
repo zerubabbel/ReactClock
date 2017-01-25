@@ -16,7 +16,7 @@ var ClockForm = React.createClass({
       <div>
         <form onSubmit={this.onFormSubmit}>
           <input type="text" ref="place"></input>
-          <button>Get Time</button>
+          <button>Get Timezone</button>
         </form>
       </div>
     )
