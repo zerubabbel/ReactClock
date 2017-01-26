@@ -6,17 +6,21 @@ var WorldClock = require('WorldClock');
 var Clock = React.createClass({
   getInitialState: function () {
     return {
-      place: '{insert lat and long points}',
-      time: '{search for time zone}'
+      isLoading: false
+      // place: '{insert lat and long points}',
+      // time: '{search for time zone}'
     }
   },
   handleSearch: function (place) {
     var that = this;
 
+    this.setState({isLoading: true});
+
     WorldClock.getTime(place).then(function (time) {
       that.setState({
         place: place,
-        time: time
+        time: time,
+        isLoading: false
       });
     });
     // this.setState({
@@ -25,13 +29,21 @@ var Clock = React.createClass({
     // });
   },
   render: function(){
-    var {place, time} = this.state;
+    var {isLoading, place, time} = this.state;
+
+    function renderMessage () {
+      if (isLoading) {
+        return <h3>Please wait while we fetch your timezone....</h3>;
+      } else if (place && time) {
+        return <ClockMessage place={place} time={time}/>;
+      }
+    }
 
     return (
       <div>
         <h3>Timezone Finder</h3>
         <ClockForm onSearch={this.handleSearch}/>
-        <ClockMessage place={place} time={time}/>
+        {renderMessage()}
       </div>
     )
   }

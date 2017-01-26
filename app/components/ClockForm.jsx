@@ -15,7 +15,7 @@ var ClockForm = React.createClass({
     return (
       <div>
         <form onSubmit={this.onFormSubmit}>
-          <input type="text" ref="place"></input>
+          <input type="text" ref="place" placeholder="Place long lat coordinates (Eg. 30,40)"></input>
           <button>Get Timezone</button>
         </form>
       </div>
